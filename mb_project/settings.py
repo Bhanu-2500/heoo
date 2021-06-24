@@ -25,7 +25,7 @@ SECRET_KEY = '2-g-28p^4b&_ur^x0v+4mejh)bpzwz1hkljjag7w=sv_q(abp%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,12 +52,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mb_project.urls'
 
-import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'templates')
+            os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
